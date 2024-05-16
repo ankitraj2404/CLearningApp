@@ -1,0 +1,68 @@
+<DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+<title>C PROGRAMMING</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<script>  
+    function validateform(){  
+    var name=document.myform.username.value;  
+    var password=document.myform.password.value;  
+      
+    if (name==null || name==""){  
+      alert("username can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    }  
+    
+    </script>  
+</head>
+
+<body>
+
+   <header>
+       <h2 class="logo"><i class="fas fa-graduation-cap" id="cap"></i>C LEARNING APP</h2>
+           <nav class="navigation"> 
+            <!-- <a href="#">Home</a>
+                 <a href="#">About</a>                
+                 <a href="#">Contact</a> -->
+                 <!-- <button class="btnlogin-popup">Login</button>   -->
+
+            </nav>
+  </header>
+
+  <div class="wrapper">
+    <div class="form_box Login">
+        <h2>Login</h2>
+        <form action="login_process.php" name="myform" method="post" onsubmit="return validateform()">
+            <div class="input-box">
+                <span class="icon"></span>
+                <input type="text"  id="username" name="username"/>
+                <lable for="username">Username</lable>
+            </div>
+            <div class="input-box">
+                <span class="icon"></span>
+                <input type="password" id="password" name="password"/>
+                <lable for="password">Password</lable>
+            </div>
+            <div class="forgot-password">
+              <a herf="#">Forgot password?</a>
+            </div>
+            <input type="submit" class="btn" value="Login"/>
+            <div class="Login_register">
+                <p>Don't have an account?<a href="signup.html"> Sign-up</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="gif-container">
+      <img src="https://cdn.dribbble.com/users/2374064/screenshots/4732055/media/077438cdf5f29a0bccd2475a2cb3a001.gif" alt="gif" class="gif">
+  </div>
+  </div>
+  
+</body>
