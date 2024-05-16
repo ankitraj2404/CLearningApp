@@ -1,0 +1,74 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>C PROGRAMMING</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+    </head>
+    <script>
+        function valemail(inputtxt) {
+            var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if ((inputtxt.value.match(mail))) {
+                document.form1.email.focus();
+                return true;
+            }
+            else {
+                // alert("enter valid mail id");
+                document.getElementById('mailAlert').innerHTML = "*enter valid mail id";
+                document.getElementById('email').value = '';
+                document.form1.email.focus();
+                return false;
+            }
+        }
+        function redirectToLoginPage() {
+        window.location.href = "login.html";
+    }
+    </script>
+
+    <body>
+
+        <header>
+            <h2 class="logo"><i class="fas fa-graduation-cap" id="cap"></i>C LEARNING APP</h2>
+            <nav class="navigation">
+                <!-- <a href="#">Home</a> -->
+                <!-- <a href="#">About</a>                 -->
+                <!-- <a href="#">Contact</a> -->
+                <!-- <button class="btnlogin-popup" onclick="redirectToLoginPage()">Login</button> -->
+
+            </nav>
+
+        </header>
+
+        <div class="wrapper">
+            <div class="form_box Login">
+                <h2>Sign-up</h2>
+                <form name="cProgramming" action="signup_process.php" method="POST">
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="text" id="username" name="username" required>
+                        <lable for="username">Username</lable>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="text" id="email" name="email" onchange="valemail(document.cProgramming.email)"
+                            required>
+                        <p id="mailAlert"></p>
+                        <lable>Email</lable>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <input type="password" id="password" name="password" required>
+                        <lable>Password</lable>
+                    </div>
+                    <button type="submit" class="btn">SIGNUP</button>
+                    <div class="Login_register">
+                        <p>Already have an account?<a href="login.html"> Sign-in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>

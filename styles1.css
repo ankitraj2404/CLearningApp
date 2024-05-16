@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    header {
+
+        position: fixed;
+        top: 0;
+        left: 0; width: 100%;
+        padding: 10px 100px; background:#05bd45;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99;
+    }
+    #cap{
+        color: yellow;
+        margin-right: 8px;
+    }
+
+    .logo {
+        font-size: 20px;
+        color:#fff;
+        user-select: none;
+        margin-left: -70px;
+    
+    }
+    .navigation a{
+        position: relative;
+        font-size: 1.0em;
+        color:#fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 40px;
+    }
+    
+    .navigation a::after {
+        content:'';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s; 
+    }
+    .navigation a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    .navigation .btnlogin-popup {
+        width: 130px;
+        height: 50px;
+        background: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.1em;
+        color:#fff;
+        font-weight: 500;
+        margin-left: 40px;
+    }
+    .navigation .btnlogin-popup:hover {
+        background:  #fff;
+        color: #162938
+    }
+
+body {
+     margin: 0;
+     background-color: #fff;
+    }
+
+    .video-section{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax);
+
+    }
+   /*****video box and text*****/
+.video-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 3rem 11rem;
+        padding: 8rem 0;
+        margin: 0 2.5rem;
+        border-top: 4px solid #CCC;
+      }
+
+.video-section:first-child {
+    border-top: none;
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+      }
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 85);
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: .1em .3em;
+    border-radius: .3em;
+    font-size: .9em;
+}
+
+.thumbnail-image {
+    width: 100;
+    height: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #aaa;
+}
+
+.video-title {
+    
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    color: black;
+  }
+
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    text-decoration: none;
+    color: black;  
+}
+
+/*******perfect*********/
+
+ .categories {
+    padding: 6rem ;
+    border-top: 1px solid #999 ;
+   
+ }
+
+ .categories-section {
+    display: flex;
+    overflow: hidden;
+ }
+
+ .category {
+    margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border:  1px solid #ccc;
+    border-radius: 900px;
+    background-color: #019587;
+    padding: .6rem 1rem;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 150ms;
+ }
+
+ .category:hover {
+    background-color: #019587;
+
+ }
+
+.category :last-child {
+    margin-right: 0;
+}
+
+.quizz {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    gap: 3rem 6rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 2px #fff; /* Changed from border: 2px #fff; */
+    border-radius: 5px;
+    background-color: #05bd45;
+    padding: .6rem 10rem;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 150ms;
+    color: #fff;
+}
+
+
+.btnlogout {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #05bd45;
+    color: white;
+    text-decoration: none;
+    border: 2px #fff;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnlogout:hover {
+    background-color: #fff;
+    color: #162938;
+}
